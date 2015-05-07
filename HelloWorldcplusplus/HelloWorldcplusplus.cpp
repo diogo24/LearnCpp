@@ -10,6 +10,7 @@ int main(int argc, char* argv[])
 	BasicMain();
 	UserDefinedMain();
 	ModularityDefinedMain();
+	ClassesMain();
 
 	int output;
 	cin >> output;

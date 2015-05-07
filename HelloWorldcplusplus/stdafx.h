@@ -23,3 +23,5 @@
 #include "UserDefinedTypes.h"
 #include "Modularity.h"
 #include "Exceptions.h"
+#include "Classes.h"
+#include "Class_Complex.h"

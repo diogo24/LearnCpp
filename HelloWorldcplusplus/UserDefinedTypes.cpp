@@ -16,7 +16,8 @@ double read_and_sum(int s)
 	vector_init(v, s);
 
 	for (int i = 0; i != s; ++i)
-		cin >> v.elem[i];             // read into elements
+		//cin >> v.elem[i];             // read into elements
+		v.elem[i] = i; // replace user input for a value
 
 	double sum = 0;
 	for (int i = 0; i != s; ++i)
