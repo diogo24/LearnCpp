@@ -111,6 +111,7 @@
     <ClInclude Include="Basics.h" />
     <ClInclude Include="Classes.h" />
     <ClInclude Include="Class_Complex.h" />
+    <ClInclude Include="Class_Vector.h" />
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Modularity.h" />
     <ClInclude Include="stdafx.h" />
@@ -122,6 +123,7 @@
     <ClCompile Include="Basics.cpp" />
     <ClCompile Include="Classes.cpp" />
     <ClCompile Include="Class_Complex.cpp" />
+    <ClCompile Include="Class_Vector.cpp" />
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="HelloWorldcplusplus.cpp" />
     <ClCompile Include="Modularity.cpp" />

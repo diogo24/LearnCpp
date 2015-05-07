@@ -6,5 +6,7 @@ int ClassesMain() {
 	Class_Complex classComplexObject{ 5, 5 };
 	ClassComplexUse(classComplexObject);
 
+	ClassVectorUse();
+
 	return 0;
 }

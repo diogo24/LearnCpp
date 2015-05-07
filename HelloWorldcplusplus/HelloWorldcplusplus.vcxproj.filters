@@ -45,6 +45,9 @@
     <ClInclude Include="Classes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Class_Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -72,6 +75,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Classes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Class_Vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

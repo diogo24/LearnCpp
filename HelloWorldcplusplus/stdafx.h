@@ -18,6 +18,7 @@
 #include <string>
 #include <stdexcept>
 #include <numeric>
+#include <sstream>
 
 #include "Basics.h"
 #include "UserDefinedTypes.h"
@@ -25,3 +26,4 @@
 #include "Exceptions.h"
 #include "Classes.h"
 #include "Class_Complex.h"
+#include "Class_Vector.h"
