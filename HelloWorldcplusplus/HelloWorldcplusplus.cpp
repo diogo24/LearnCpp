@@ -9,6 +9,7 @@ int main(int argc, char* argv[])
 {
 	BasicMain();
 	UserDefinedMain();
+	ModularityDefinedMain();
 
 	int output;
 	cin >> output;

@@ -16,6 +16,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <stdexcept>
+#include <numeric>
 
 #include "Basics.h"
 #include "UserDefinedTypes.h"
+#include "Modularity.h"
+#include "Exceptions.h"
