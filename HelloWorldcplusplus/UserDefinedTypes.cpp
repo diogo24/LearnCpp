@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+using namespace std;
+
 void vector_init(Vector_Struct& v, int s)
 {
 	v.elem = new double[s];   // allocate an array of s doubles
@@ -98,7 +100,7 @@ void UserDefinedMain() {
 	cout << "\n";
 
 	Color col           = Color::red;
-	//int  col            = red; ??
+	//int  col          = red; ??
 	Traffic_light light = Traffic_light::red;
 
 	Traffic_light next  = ++light;       // next becomes Traffic_light::green

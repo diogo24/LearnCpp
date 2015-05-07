@@ -1,7 +1,5 @@
 #include "stdafx.h"
 
-using namespace std;
-
 // define necessary types that make the basics run
 class Elem {};
 class A {};
@@ -29,7 +27,7 @@ class complex {
 public:
 	T r;
 	T i;
-	
+
 	complex(T _r) {
 		r = _r;
 	}
@@ -51,6 +49,6 @@ double sqrt(double d);    // double argument; return a double
 
 void print(int);     // takes an integer argument
 void print(double);  // takes a floating-point argument
-void print(string);  // takes a string argument
+void print(std::string);  // takes a string argument
 
 int BasicMain();
