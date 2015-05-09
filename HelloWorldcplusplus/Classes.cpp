@@ -8,5 +8,7 @@ int ClassesMain() {
 
 	ClassVectorUse();
 
+	AbstractTypeUse();
+
 	return 0;
 }

@@ -25,8 +25,8 @@ public:
 		}
 	}                     // destructor: release resources
 
-	double& operator[](int i);
-	int size() const;
+	double& operator[](int i) { return elem[i]; }
+	int size() const { return sz; }
 
 	void print();
 };

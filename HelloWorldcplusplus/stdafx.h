@@ -19,6 +19,7 @@
 #include <stdexcept>
 #include <numeric>
 #include <sstream>
+#include <list>
 
 #include "Basics.h"
 #include "UserDefinedTypes.h"
@@ -27,3 +28,10 @@
 #include "Classes.h"
 #include "Class_Complex.h"
 #include "Class_Vector.h"
+#include "AbstractTypes.h"
+#include "Abstract_Container.h"
+#include "Container_Vector.h"
+#include "Container_List.h"
+#include "Shape.h"
+#include "Circle.h"
+#include "Smiley.h"
