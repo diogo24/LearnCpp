@@ -20,6 +20,7 @@
 #include <numeric>
 #include <sstream>
 #include <list>
+#include <memory>
 
 #include "Basics.h"
 #include "UserDefinedTypes.h"

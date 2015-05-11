@@ -137,6 +137,7 @@
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="HelloWorldcplusplus.cpp" />
     <ClCompile Include="Modularity.cpp" />
+    <ClCompile Include="Smiley.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='New compiler|Win32'">Create</PrecompiledHeader>

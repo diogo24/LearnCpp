@@ -110,5 +110,8 @@
     <ClCompile Include="Container_List.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Smiley.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

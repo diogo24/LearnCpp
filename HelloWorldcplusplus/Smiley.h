@@ -23,14 +23,7 @@ public:
 	// ...
 
 private:
-	vector<Shape*> eyes;         // usually two eyes
+	std::vector<Shape*> eyes;         // usually two eyes
 	Shape* mouth;
 };
 
-void Smiley::draw() const
-{
-	Circle::draw();
-	for (auto p : eyes)
-		p->draw();
-	mouth->draw();
-}
