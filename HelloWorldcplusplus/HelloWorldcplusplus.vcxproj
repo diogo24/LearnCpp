@@ -115,6 +115,9 @@
     <ClInclude Include="Classes.h" />
     <ClInclude Include="Class_Complex.h" />
     <ClInclude Include="Class_Vector.h" />
+    <ClInclude Include="Class_W.h" />
+    <ClInclude Include="Class_X.h" />
+    <ClInclude Include="Class_Y.h" />
     <ClInclude Include="Container_List.h" />
     <ClInclude Include="Container_Vector.h" />
     <ClInclude Include="Exceptions.h" />

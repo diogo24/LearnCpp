@@ -27,6 +27,8 @@ class complex {
 public:
 	T r;
 	T i;
+	complex() {
+	}
 
 	complex(T _r) {
 		r = _r;

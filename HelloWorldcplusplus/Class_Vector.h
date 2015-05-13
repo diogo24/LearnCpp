@@ -7,11 +7,20 @@ private:
 public:
 	Class_Vector() :elem{ new double[0] }, sz{ 0 } {};
 
-	Class_Vector(int s) :elem{ new double[s] }, sz{ s }        // constructor: acquire resources
+	explicit Class_Vector(int s)  // no implicit conversion from int to Vector
+		:elem{ new double[s] }, sz{ s }        // constructor: acquire resources
 	{
 		for (int i = 0; i != s; ++i)       // initialize elements
 			elem[i] = 0;
 	}
+
+	Class_Vector(const Class_Vector& v); // copy constructor
+
+	Class_Vector(Class_Vector&& a);                     // move constructor
+
+	Class_Vector& operator=(const Class_Vector& a);      // copy assignment
+
+	Class_Vector& operator=(Class_Vector&& a);          // move assignment
 
 	Class_Vector(std::initializer_list<double>);     // initialize with a list of doubles
 	// ...
@@ -26,9 +35,12 @@ public:
 	}                     // destructor: release resources
 
 	double& operator[](int i) { return elem[i]; }
+	const double& operator[](int i) const { return elem[i]; };
 	int size() const { return sz; }
 
 	void print();
 };
+
+Class_Vector operator+(const Class_Vector& a, const Class_Vector& b);
 
 void ClassVectorUse();

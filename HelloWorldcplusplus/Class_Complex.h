@@ -19,6 +19,8 @@ namespace ArithmeticTypes {
 
 		void print();
 	};
+
+	Class_Complex operator*(Class_Complex a, Class_Complex b);
 }
 
 void ClassComplexUse(ArithmeticTypes::Class_Complex z);

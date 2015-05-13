@@ -14,7 +14,7 @@ Class_Complex& Class_Complex::operator /= (Class_Complex z) {
 Class_Complex operator+(Class_Complex a, Class_Complex b) { return a += b; }
 Class_Complex operator-(Class_Complex a, Class_Complex b) { return a -= b; }
 Class_Complex operator-(Class_Complex a){ return{ -a.real(), -a.imag() }; }     // unary minus
-Class_Complex operator*(Class_Complex a, Class_Complex b) { return a *= b; }
+Class_Complex ArithmeticTypes::operator*(Class_Complex a, Class_Complex b) { return a *= b; }
 Class_Complex operator/(Class_Complex a, Class_Complex b) { return a /= b; }
 
 bool operator==(Class_Complex a, Class_Complex b)          // equal

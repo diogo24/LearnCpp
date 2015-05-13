@@ -58,6 +58,63 @@ void Class_Vector::push_back(double d){
 	sz    = size;
 }
 
+Class_Vector::Class_Vector(const Class_Vector& a)     // copy constructor
+	:elem{ new double[a.sz] },        // allocate space for elements
+	sz{ a.sz }
+{
+	for (int i = 0; i != sz; ++i)      // copy elements
+		elem[i] = a.elem[i];
+}
+
+Class_Vector::Class_Vector(Class_Vector&& a) // move constructor
+	:elem{ a.elem },          // "grab the elements" from a
+	sz{ a.sz }
+{
+	a.elem = nullptr;       // now a has no elements
+	a.sz = 0;
+}
+
+Class_Vector& Class_Vector::operator=(const Class_Vector& a)       // copy assignment
+{
+	double* p = new double[a.sz];
+	for (int i = 0; i != a.sz; ++i)
+		p[i] = a.elem[i];
+	delete[] elem;        // delete old elements
+	elem = p;
+	sz = a.sz;
+	return *this;
+}
+
+Class_Vector& Class_Vector::operator=(Class_Vector&& a)       // move assignment
+{
+
+	// well implemented???
+	delete[] elem;        // delete old elements
+	elem = a.elem;
+	sz   = a.sz;
+
+	a.elem = nullptr;       // now a has no elements
+	a.sz   = 0;
+
+	return *this;
+}
+
+class Vector_size_mismatch : public runtime_error {
+public:
+	Vector_size_mismatch() :runtime_error("Vector_size_mismatch"){};
+};
+
+Class_Vector operator+(const Class_Vector& a, const Class_Vector& b)
+{
+	if (a.size() != b.size())
+		throw Vector_size_mismatch{};
+
+	Class_Vector res(a.size());
+	for (int i = 0; i != a.size(); ++i)
+		res[i] = a[i] + b[i];
+	return res;
+}
+
 void ClassVectorUse() {
 	fDestroy(5);
 	

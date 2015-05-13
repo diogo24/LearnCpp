@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 using namespace std;
+using namespace ArithmeticTypes;
 
 void Container_Vector::initializeVector(initializer_list<double> valuesList) {
 	for (auto value : valuesList) {
@@ -182,6 +183,59 @@ void use_shape()
 	rotate_all_unique(v_unique, 45);          // call rotate(45) for each element
 }
 
+void copyValue(Class_Complex z1)
+{
+	Class_Complex z2{ z1 };    // copy initialization
+	Class_Complex z3;
+	z3 = z2;            // copy assignment
+	// ...
+}
+
+void bad_copy(Class_Vector v1)
+{
+	Class_Vector v2 = v1;    // copy v1's representation into v2
+	v1[0] = 2;         // v2[0] is now also 2!
+	v2[1] = 3;         // v1[1] is now also 3!
+}
+
+void sumVectors(const Class_Vector& x, const Class_Vector& y, const Class_Vector& z)
+{
+	Class_Vector r;
+	// ...
+	r = x + y + z;
+	// ...
+}
+
+Class_Vector VectorCopyAndMove()
+{
+	Class_Vector x(1000);
+	Class_Vector y(1000);
+	Class_Vector z(1000);
+
+	sumVectors(x, y, z);
+
+	z = x;                // we get a copy
+	y = std::move(x);     // we get a move
+	return z;             // we get a move
+};
+
+// resource management
+std::vector<thread> my_threads;
+
+void heartbeat() {};
+
+Class_Vector init(int n)
+{
+	thread t{ heartbeat };             // run heartbeat concurrently (on its own thread)
+	my_threads.push_back(move(t));    // move t into my_threads
+	// ... more initialization ...
+
+	Class_Vector vec(n);
+	for (int i = 0; i<vec.size(); ++i)
+		vec[i] = 777;
+	return vec;                       // move res out of init()
+};
+
 void AbstractTypeUse(){
 	Container_Vector containerVector(10);
 	containerVector.initializeVector({ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
@@ -193,4 +247,19 @@ void AbstractTypeUse(){
 	vector<Shape*> shapes(0);
 	rotate_all(shapes, 30);
 	use_shape();
-}
+
+	Class_Complex c{ 2, 2 };
+	copyValue(c);
+	auto vcm = VectorCopyAndMove();
+
+	Class_Complex z1 = 3.14; // z1 becomes {3.14,0.0}
+	Class_Complex z2 = z1 * 2; // z2 becomes {6.28,0.0}
+
+	//explicit Class_Vector(int s); don't allow int to vector conversion
+	//Class_Vector v1 = 7; // OK: v1 has 7 elements
+	
+	Class_Vector v1(7);    // OK: v1 has 7 elements
+	//Class_Vector v2 = 7;   // error: no implicit conversion from int to Vector
+
+	auto v = init(10000);     // start heartbeat and initialize v
+};

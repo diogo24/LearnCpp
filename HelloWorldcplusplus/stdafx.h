@@ -21,6 +21,7 @@
 #include <sstream>
 #include <list>
 #include <memory>
+#include <thread>
 
 #include "Basics.h"
 #include "UserDefinedTypes.h"

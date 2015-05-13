@@ -69,6 +69,15 @@
     <ClInclude Include="Smiley.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Class_X.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Class_Y.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Class_W.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
