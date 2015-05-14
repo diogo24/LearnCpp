@@ -99,11 +99,6 @@ Class_Vector& Class_Vector::operator=(Class_Vector&& a)       // move assignment
 	return *this;
 }
 
-class Vector_size_mismatch : public runtime_error {
-public:
-	Vector_size_mismatch() :runtime_error("Vector_size_mismatch"){};
-};
-
 Class_Vector operator+(const Class_Vector& a, const Class_Vector& b)
 {
 	if (a.size() != b.size())

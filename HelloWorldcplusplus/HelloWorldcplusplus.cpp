@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
 	UserDefinedMain();
 	ModularityDefinedMain();
 	ClassesMain();
+	TemplatesMain();
 
 	int output;
 	cin >> output;

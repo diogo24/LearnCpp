@@ -37,3 +37,5 @@
 #include "Shape.h"
 #include "Circle.h"
 #include "Smiley.h"
+#include "Templates.h"
+#include "Template_Vector.h"

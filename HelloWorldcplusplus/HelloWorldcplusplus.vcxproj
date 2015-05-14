@@ -126,6 +126,8 @@
     <ClInclude Include="Smiley.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Templates.h" />
+    <ClInclude Include="Template_Vector.h" />
     <ClInclude Include="UserDefinedTypes.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
@@ -136,7 +138,6 @@
     <ClCompile Include="Class_Complex.cpp" />
     <ClCompile Include="Class_Vector.cpp" />
     <ClCompile Include="Container_List.cpp" />
-    <ClCompile Include="Container_Vector.cpp" />
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="HelloWorldcplusplus.cpp" />
     <ClCompile Include="Modularity.cpp" />
@@ -146,6 +147,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='New compiler|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Templates.cpp" />
     <ClCompile Include="UserDefinedTypes.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
