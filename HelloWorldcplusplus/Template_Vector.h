@@ -6,7 +6,7 @@ private:
 public:
 	explicit Template_Vector(int s);        // constructor: establish invariant, acquire resources
 	/*Template_Vector(T* elem);*/ // we can't know the size of the array pointer
-	Template_Vector(std::initializer_list<T> elem); //?? how to make it work
+	Template_Vector(std::initializer_list<T> elem); //?? how to make it work check for release resources, how we have to do it???
 	~Template_Vector() { delete[] elem; }   // destructor: release resources
 
 	// ... copy and move operations ...

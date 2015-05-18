@@ -121,6 +121,7 @@
     <ClInclude Include="Container_List.h" />
     <ClInclude Include="Container_Vector.h" />
     <ClInclude Include="Exceptions.h" />
+    <ClInclude Include="Less_Than.h" />
     <ClInclude Include="Modularity.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Smiley.h" />

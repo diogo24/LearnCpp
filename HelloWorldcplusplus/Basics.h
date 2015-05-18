@@ -37,6 +37,8 @@ public:
 		r = _r;
 		i = _i;
 	}
+
+	complex<T>& operator+=(complex<T> z) { r += z.r, i += z.i; return *this; }   // add to re and im and return the result
 };
 
 void print_square(double x);

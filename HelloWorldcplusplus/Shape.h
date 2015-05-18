@@ -11,3 +11,5 @@ public:
 	virtual ~Shape() {}                  // destructor
 	// ...
 };
+
+std::unique_ptr<Shape> read_shape_unique(std::istream& is);
